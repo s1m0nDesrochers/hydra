@@ -26,8 +26,8 @@ struct ContentView: View {
                     Text("30°C").font(.system(size: 24))
                     Spacer()
                     Text("60%").font(.system(size: 24))
-                    Text("Calvettes").font(.custom("Optima-Bold",size:36))
                 }.padding(15).background(Color.white).cornerRadius(10)
+                Text("Calvettes").font(.custom("Optima-Bold",size:36))
             }.frame(alignment:.trailing).padding(20)
         }.frame(minWidth:0,maxWidth: .infinity ,minHeight:0, maxHeight: .infinity, alignment: .topLeading)
                     
