@@ -11,8 +11,8 @@ struct ContentView: View {
     var body: some View {
         VStack{
             HStack{
-                    Image("hydraLogo").resizable().frame(width: 60, height: 60)
-                Text("Hydra").font(.system(size: 36)).foregroundColor(Color.white).padding(.leading,15)
+                    Image("hydraLogo").resizable().frame(width: 50, height: 50)
+                Text("Hydra").font(.largeTitle).foregroundColor(Color.white).padding(.leading,15)
                 Spacer()
                 Button(action:{
                     print("allo")
