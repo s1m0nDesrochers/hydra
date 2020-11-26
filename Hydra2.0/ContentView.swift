@@ -11,6 +11,16 @@ struct ContentView: View {
     var body: some View {
         VStack{
             HStack{
+                    Image("hydraLogo").resizable().frame(width: 60, height: 60)
+                Text("Hydra").font(.system(size: 36)).foregroundColor(Color.white).padding(.leading,15)
+                Spacer()
+                Button(action:{
+                    print("allo")
+                }){
+                    Image(systemName: "gear").resizable().frame(width: 50, height: 50).foregroundColor(.white).font(Font.system(.largeTitle).bold())
+                }
+            }.frame(minWidth:0, maxWidth: .infinity, minHeight: 70, alignment: .center).padding(10).background(LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .leading, endPoint: .trailing))
+        }.frame(minWidth:0,maxWidth: .infinity ,minHeight:0, maxHeight: .infinity, alignment: .topLeading)
                     Image("hydraLogo").resizable().frame(width: 100, height: 100)
                 Text("Hydra").font(.custom("Optima-Bold", size: 36)).padding(.leading,15)
                     Spacer()
@@ -33,6 +43,8 @@ struct ContentView: View {
         }.frame(minWidth:0,maxWidth: .infinity ,minHeight:0, maxHeight: .infinity, alignment: .topLeading).background(Color.blue)
         
     }
+    
+    
         
     
 }
