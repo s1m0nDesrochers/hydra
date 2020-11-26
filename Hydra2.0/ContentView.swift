@@ -11,8 +11,9 @@ struct ContentView: View {
     var body: some View {
         VStack{
             HStack{
-                    Image("hydraLogo").resizable().frame(width: 60, height: 60)
-                Text("Hydra").font(.system(size: 36)).foregroundColor(Color.white).padding(.leading,15)
+                    Image("hydraLogo").resizable().frame(width: 100, height: 100)
+                Text("Hydra").font(.largeTitle).foregroundColor(Color.white).padding(.leading,15)
+                Text("Hydra").font(.largeTitle).foregroundColor(Color.white).padding(.leading,15)
                 Spacer()
                 Button(action:{
                     print("allo")
@@ -30,6 +31,8 @@ struct ContentView: View {
                 Text("Calvettes").font(.custom("Optima-Bold",size:36))
             }.frame(alignment:.trailing).padding(20)
         }.frame(minWidth:0,maxWidth: .infinity ,minHeight:0, maxHeight: .infinity, alignment: .topLeading)
+        
+        
                     
             
             
