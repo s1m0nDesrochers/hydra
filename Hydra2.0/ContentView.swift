@@ -11,7 +11,8 @@ struct ContentView: View {
     var body: some View {
         VStack{
             HStack{
-                    Image("hydraLogo").resizable().frame(width: 50, height: 50)
+                    Image("hydraLogo").resizable().frame(width: 100, height: 100)
+                Text("Hydra").font(.largeTitle).foregroundColor(Color.white).padding(.leading,15)
                 Text("Hydra").font(.largeTitle).foregroundColor(Color.white).padding(.leading,15)
                 Spacer()
                 Button(action:{
@@ -30,6 +31,8 @@ struct ContentView: View {
                 }.padding(15).background(Color.white).cornerRadius(10)
             }.frame(alignment:.trailing).padding(20)
         }.frame(minWidth:0,maxWidth: .infinity ,minHeight:0, maxHeight: .infinity, alignment: .topLeading)
+        
+        
                     
             
             
