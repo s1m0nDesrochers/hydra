@@ -15,14 +15,15 @@ struct ContentView: View {
                 Text("Hydra").font(.system(size: 36)).foregroundColor(Color.white).padding(.leading,15)
                 Spacer()
                 Button(action:{
-                    print("Button pressed")
+                    
                 }){
                     Image(systemName: "gear").resizable().frame(width: 50, height: 50).foregroundColor(.white).font(Font.system(.largeTitle).bold())
                 }
             }.frame(minWidth:0, maxWidth: .infinity, minHeight: 70, alignment: .center).padding(10).background(LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .leading, endPoint: .trailing))
         }.frame(minWidth:0,maxWidth: .infinity ,minHeight:0, maxHeight: .infinity, alignment: .topLeading)
-        
     }
+    
+    
         
     
 }
