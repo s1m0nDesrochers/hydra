@@ -74,5 +74,46 @@ class MainScreenVM: ObservableObject {
         }
             
     }
+    
+    @objc func sendData(_sender: AnyObject?){
+        
+        let humidityString = humidityInput.text != "" ? humidityInput.text : "25"
+        
+        let temperatureString = temperatureInput.text != "" ? temperatureInput.text : "75"
+        
+        let humidity = Float(humidityString!)
+        
+        let temperature = Float(temperatureString!)
+        
+        let json: [String: Any] = ["humidity": ["min": humidity!,"max":humidity! + 5],"temperature": ["min": temperature!, "max": temperature! + 5]]
+                                
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        // create post request
+        let url = URL(string: "http://165.227.32.127/api/threshold/")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+
+        // insert json data to the request
+        request.httpBody = jsonData
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
+                if let httpResponse = response as? HTTPURLResponse {
+                        print("statusCode: \(httpResponse.statusCode)")
+                    }
+            }
+        }
+
+        task.resume()
+        
+    }
+    
 
 }

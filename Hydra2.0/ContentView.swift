@@ -61,7 +61,7 @@ struct ContentView: View {
                         Image("waterTank").resizable().frame(width: 100, height: 100)
                         ZStack(alignment:.bottom){
                             Rectangle().frame(width: 10, height: 100).foregroundColor(Color.gray)
-                            Rectangle().frame(width: 10, height: CGFloat(viewModel.waterTank.waterLevel)).foregroundColor(Color.blue)
+                            Rectangle().frame(width: 10, height: CGFloat(viewModel.waterTank.progress)).foregroundColor(Color.blue)
                         }
                         Text("Ph: \(String(format:"%.1f",viewModel.waterTank.ph))").font(.custom("Optima-Bold",size: 24)).padding(50)
                         
