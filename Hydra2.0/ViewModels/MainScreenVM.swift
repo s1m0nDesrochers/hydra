@@ -54,7 +54,7 @@ class MainScreenVM: ObservableObject {
     
     func callHydraApi(){
         
-        let url = URL(string: "http://165.227.32.127/api/Threshold/")!
+        let url = URL(string: "http://165.227.32.127/api/Threshold/1")!
 
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data else { return }

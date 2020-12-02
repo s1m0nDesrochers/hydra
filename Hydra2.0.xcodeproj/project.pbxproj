@@ -19,6 +19,7 @@
 		DE40D37D25720162008FD265 /* Ambient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D37C25720162008FD265 /* Ambient.swift */; };
 		DE40D382257201A8008FD265 /* Calvette.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D381257201A8008FD265 /* Calvette.swift */; };
 		DE40D387257202D6008FD265 /* WaterTank.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D386257202D6008FD265 /* WaterTank.swift */; };
+		DEF714362577ED5F00C5CA67 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF714352577ED5F00C5CA67 /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		DE40D37C25720162008FD265 /* Ambient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient.swift; sourceTree = "<group>"; };
 		DE40D381257201A8008FD265 /* Calvette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calvette.swift; sourceTree = "<group>"; };
 		DE40D386257202D6008FD265 /* WaterTank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterTank.swift; sourceTree = "<group>"; };
+		DEF714352577ED5F00C5CA67 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +109,11 @@
 		DE121DC5256FEE81003A3A76 /* Hydra2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				DEF7142C2577DFEE00C5CA67 /* Views */,
 				DE3C5A3F2572CDBF0085EB8A /* ViewModels */,
 				DE40D3782571F227008FD265 /* Models */,
 				DE121DC6256FEE81003A3A76 /* AppDelegate.swift */,
 				DE121DC8256FEE81003A3A76 /* SceneDelegate.swift */,
-				DE121DCA256FEE81003A3A76 /* ContentView.swift */,
 				DE121DCC256FEE82003A3A76 /* Assets.xcassets */,
 				DE121DD1256FEE82003A3A76 /* LaunchScreen.storyboard */,
 				DE121DD4256FEE82003A3A76 /* Info.plist */,
@@ -162,6 +164,15 @@
 				DE40D386257202D6008FD265 /* WaterTank.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DEF7142C2577DFEE00C5CA67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE121DCA256FEE81003A3A76 /* ContentView.swift */,
+				DEF714352577ED5F00C5CA67 /* InputView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 				2767A5A82577D1770027E632 /* ContentView.swift in Sources */,
 				DE121DC9256FEE81003A3A76 /* SceneDelegate.swift in Sources */,
 				DE40D382257201A8008FD265 /* Calvette.swift in Sources */,
+				DEF714362577ED5F00C5CA67 /* InputView.swift in Sources */,
 				DE40D387257202D6008FD265 /* WaterTank.swift in Sources */,
 				DE3C5A412572CDF30085EB8A /* MainScreenVM.swift in Sources */,
 			);

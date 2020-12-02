@@ -19,6 +19,8 @@ struct ContentView: View {
     
     var body: some View {
         
+        NavigationView{
+        
         ScrollView{
             
             VStack{
@@ -26,12 +28,12 @@ struct ContentView: View {
                         Image("hydraLogo").resizable().frame(width: 50, height: 50)
                     Text("Hydra").foregroundColor(Color.white).font(.custom("AppleSDGothicNeo-Light" ,size:36))
                     Spacer()
-                    Button(action:{
-                        print("allo")
-                    }){
+                    NavigationLink(destination: InputView()){
                         Image(systemName: "gear").resizable().frame(width: 30, height: 30).foregroundColor(.white).font(Font.system(.largeTitle).bold()).padding(.leading, 40)
+                            
                     }
-                }.frame(minWidth:0, maxWidth: .infinity, minHeight: 70, alignment: .center).padding(10).background(LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .leading, endPoint: .trailing))
+                    
+            }.frame(minWidth:0, maxWidth: .infinity, minHeight: 70, alignment: .center).padding(10).background(LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .leading, endPoint: .trailing))
                 
                 VStack(alignment:.leading , spacing:15 ){
                     
@@ -86,8 +88,14 @@ struct ContentView: View {
         }
         
     }
+        
+    }
     
 }
+
+
+
+
 
 
 struct ContentView_Previews: PreviewProvider {
@@ -95,3 +103,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
