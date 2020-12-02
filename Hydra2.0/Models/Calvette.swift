@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Calvette: ObservableObject {
+class Calvette: ObservableObject, Codable {
 
     @Published var temperature1: Float
     
@@ -32,6 +32,13 @@ class Calvette: ObservableObject {
     @Published var humidityLowerTreshold3: Float
     
     @Published var humidityUpperTreshold3: Float
+    
+    
+    enum CodingKeys : CodingKey{
+        
+        case temperature1, humidity1, humidityLowerTreshold1, humidityUpperTreshold1, temperature2, humidity2, humidityLowerTreshold2, humidityUpperTreshold2, temperature3, humidity3, humidityLowerTreshold3, humidityUpperTreshold3
+        
+    }
     
     init() {
         
@@ -62,5 +69,42 @@ class Calvette: ObservableObject {
         
         
     }
+    
+    func encode(to encoder: Encoder) throws {
+        /*var container = encoder.container(keyedBy: CodingKeys.self)
+
+        try container.encode(temp, forKey: .temp)
+        try container.encode(humidity, forKey: .humidity)*/
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        temperature1 = try container.decode(Float.self, forKey: .temperature1)
+            
+        humidity1 = try container.decode(Float.self, forKey: .humidity1)
+        
+        humidityLowerTreshold1 = try container.decode(Float.self, forKey: .humidityLowerTreshold1)
+        
+        humidityUpperTreshold1 = try container.decode(Float.self, forKey: .humidityUpperTreshold1)
+        
+        temperature2 = try container.decode(Float.self, forKey: .temperature2)
+        
+        humidity2 = try container.decode(Float.self, forKey: .humidity2)
+        
+        humidityLowerTreshold2 = try container.decode(Float.self, forKey: .humidityLowerTreshold2)
+        
+        humidityUpperTreshold2 = try container.decode(Float.self, forKey: .humidityUpperTreshold2)
+        
+        temperature3 = try container.decode(Float.self, forKey: .temperature3)
+        
+        humidity3 = try container.decode(Float.self, forKey: .humidity3)
+        
+        humidityLowerTreshold3 = try container.decode(Float.self, forKey: .humidityLowerTreshold3)
+        
+        humidityUpperTreshold3 = try container.decode(Float.self, forKey: .humidityUpperTreshold3)
+    }
+    
+    
 
 }
