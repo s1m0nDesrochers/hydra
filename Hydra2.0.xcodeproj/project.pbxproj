@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2767A5A82577D1770027E632 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DCA256FEE81003A3A76 /* ContentView.swift */; };
 		DE121DC7256FEE81003A3A76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DC6256FEE81003A3A76 /* AppDelegate.swift */; };
 		DE121DC9256FEE81003A3A76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DC8256FEE81003A3A76 /* SceneDelegate.swift */; };
-		DE121DCB256FEE81003A3A76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DCA256FEE81003A3A76 /* ContentView.swift */; };
 		DE121DCD256FEE82003A3A76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE121DCC256FEE82003A3A76 /* Assets.xcassets */; };
 		DE121DD0256FEE82003A3A76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE121DCF256FEE82003A3A76 /* Preview Assets.xcassets */; };
 		DE121DD3256FEE82003A3A76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE121DD1256FEE82003A3A76 /* LaunchScreen.storyboard */; };
@@ -42,7 +42,7 @@
 		DE121DC3256FEE81003A3A76 /* Hydra2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hydra2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE121DC6256FEE81003A3A76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE121DC8256FEE81003A3A76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE121DCA256FEE81003A3A76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DE121DCA256FEE81003A3A76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		DE121DCC256FEE82003A3A76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE121DCF256FEE82003A3A76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE121DD2256FEE82003A3A76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -296,8 +296,8 @@
 			files = (
 				DE40D37D25720162008FD265 /* Ambient.swift in Sources */,
 				DE121DC7256FEE81003A3A76 /* AppDelegate.swift in Sources */,
+				2767A5A82577D1770027E632 /* ContentView.swift in Sources */,
 				DE121DC9256FEE81003A3A76 /* SceneDelegate.swift in Sources */,
-				DE121DCB256FEE81003A3A76 /* ContentView.swift in Sources */,
 				DE40D382257201A8008FD265 /* Calvette.swift in Sources */,
 				DE40D387257202D6008FD265 /* WaterTank.swift in Sources */,
 				DE3C5A412572CDF30085EB8A /* MainScreenVM.swift in Sources */,
