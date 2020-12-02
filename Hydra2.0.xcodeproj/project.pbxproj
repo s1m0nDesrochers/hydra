@@ -15,6 +15,10 @@
 		DE121DD3256FEE82003A3A76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE121DD1256FEE82003A3A76 /* LaunchScreen.storyboard */; };
 		DE121DDE256FEE82003A3A76 /* Hydra2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DDD256FEE82003A3A76 /* Hydra2_0Tests.swift */; };
 		DE121DE9256FEE83003A3A76 /* Hydra2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DE8256FEE83003A3A76 /* Hydra2_0UITests.swift */; };
+		DE3C5A412572CDF30085EB8A /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3C5A402572CDF30085EB8A /* MainScreenVM.swift */; };
+		DE40D37D25720162008FD265 /* Ambient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D37C25720162008FD265 /* Ambient.swift */; };
+		DE40D382257201A8008FD265 /* Calvette.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D381257201A8008FD265 /* Calvette.swift */; };
+		DE40D387257202D6008FD265 /* WaterTank.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D386257202D6008FD265 /* WaterTank.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		DE121DE4256FEE83003A3A76 /* Hydra2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hydra2.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE121DE8256FEE83003A3A76 /* Hydra2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydra2_0UITests.swift; sourceTree = "<group>"; };
 		DE121DEA256FEE83003A3A76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3C5A402572CDF30085EB8A /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
+		DE40D37C25720162008FD265 /* Ambient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient.swift; sourceTree = "<group>"; };
+		DE40D381257201A8008FD265 /* Calvette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calvette.swift; sourceTree = "<group>"; };
+		DE40D386257202D6008FD265 /* WaterTank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterTank.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,8 @@
 		DE121DC5256FEE81003A3A76 /* Hydra2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				DE3C5A3F2572CDBF0085EB8A /* ViewModels */,
+				DE40D3782571F227008FD265 /* Models */,
 				DE121DC6256FEE81003A3A76 /* AppDelegate.swift */,
 				DE121DC8256FEE81003A3A76 /* SceneDelegate.swift */,
 				DE121DCA256FEE81003A3A76 /* ContentView.swift */,
@@ -134,6 +144,24 @@
 				DE121DEA256FEE83003A3A76 /* Info.plist */,
 			);
 			path = Hydra2.0UITests;
+			sourceTree = "<group>";
+		};
+		DE3C5A3F2572CDBF0085EB8A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DE3C5A402572CDF30085EB8A /* MainScreenVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DE40D3782571F227008FD265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE40D37C25720162008FD265 /* Ambient.swift */,
+				DE40D381257201A8008FD265 /* Calvette.swift */,
+				DE40D386257202D6008FD265 /* WaterTank.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE40D37D25720162008FD265 /* Ambient.swift in Sources */,
 				DE121DC7256FEE81003A3A76 /* AppDelegate.swift in Sources */,
 				DE121DC9256FEE81003A3A76 /* SceneDelegate.swift in Sources */,
 				DE121DCB256FEE81003A3A76 /* ContentView.swift in Sources */,
+				DE40D382257201A8008FD265 /* Calvette.swift in Sources */,
+				DE40D387257202D6008FD265 /* WaterTank.swift in Sources */,
+				DE3C5A412572CDF30085EB8A /* MainScreenVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
