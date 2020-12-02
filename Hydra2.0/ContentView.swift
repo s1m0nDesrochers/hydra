@@ -23,7 +23,7 @@ struct ContentView: View {
             
             VStack{
                 HStack{
-                        Image("hydraLogo").resizable().frame(width: 100, height: 100)
+                        Image("hydraLogo").resizable().frame(width: 50, height: 50)
                     Text("Hydra").font(.largeTitle).foregroundColor(Color.white).padding(.leading,15)
                     Spacer()
                     Button(action:{
