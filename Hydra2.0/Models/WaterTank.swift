@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WaterTank: ObservableObject {
+class WaterTank: ObservableObject, Codable {
 
     @Published var ph: Float
     
@@ -18,6 +18,11 @@ class WaterTank: ObservableObject {
     @Published var progress: Float
     
     @Published var phTreshold : Float
+    
+    enum CodingKeys : CodingKey{
+        
+        case ph, waterLevel1, waterLevel2, phTreshold
+    }
     
     init() {
         
@@ -31,6 +36,46 @@ class WaterTank: ObservableObject {
         
         phTreshold = 6.5
         
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        /*var container = encoder.container(keyedBy: CodingKeys.self)
+
+        try container.encode(temp, forKey: .temp)
+        try container.encode(humidity, forKey: .humidity)*/
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        ph = try container.decode(Float.self, forKey: .ph)
+            
+        waterLevel1 = try container.decode(Float.self, forKey: .waterLevel1)
+        
+        waterLevel2 = try container.decode(Float.self, forKey: .waterLevel2)
+        
+        phTreshold = try container.decode(Float.self, forKey: .phTreshold)
+        
+        progress = 50.0
+    }
+    
+    func setWaterProgress(){
+        
+        if ( waterLevel1 > 500){
+            
+            progress = 90.0
+        }
+        
+        if ( waterLevel2 < 100){
+            
+            progress = 10.0
+        }
+        
+        if ( waterLevel1 < 500 && waterLevel2 > 100){
+            
+            progress = 50.0
+            
+        }
     }
 
 }

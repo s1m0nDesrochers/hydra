@@ -48,7 +48,7 @@ struct ContentView: View {
                         }.frame(width: 100,height:150,  alignment:.center).background(Color.white).opacity(0.6).cornerRadius(15)
                         VStack(spacing:10){
                             Text("2 plantes")
-                            Text("\(String(format:"%.1f",viewModel.calvettes.temperature1)) °C")
+                            Text("\(String(format:"%.1f",viewModel.calvettes.temperature2)) °C")
                             Text("\(String(format:"%.1f",viewModel.calvettes.humidity2))%")
                         }.frame(width: 100,height:150, alignment:.center).background(Color.white).opacity(0.6).cornerRadius(15)
                         VStack(spacing:10){

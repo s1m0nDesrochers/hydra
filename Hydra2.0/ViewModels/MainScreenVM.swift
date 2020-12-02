@@ -33,6 +33,8 @@ class MainScreenVM: ObservableObject {
         
         callHydraApi()
         
+        waterTank.setWaterProgress()
+        
     }
     
     func callOpenWeatherApi(){
@@ -52,6 +54,16 @@ class MainScreenVM: ObservableObject {
     
     func callHydraApi(){
         
+        let url = URL(string: "http://165.227.32.127/api/Threshold/")!
+
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data else { return }
+            let dataString = String(data: data, encoding: .utf8)
+            print(dataString)
+            self.handleHydraRequest(data: data)
+        }
+        
+        task.resume()
         
     }
     
@@ -75,9 +87,35 @@ class MainScreenVM: ObservableObject {
             
     }
     
+    func handleHydraRequest(data: Data){
+        
+        do{
+            
+            let decoded = try JSONDecoder().decode(Calvette.self, from: data)
+            
+            let decoded2 = try JSONDecoder().decode(WaterTank.self, from: data)
+            
+            DispatchQueue.main.async{
+                
+                self.calvettes = decoded
+                
+                self.waterTank = decoded2
+                
+            }
+            
+        }catch{
+            
+            print(error)
+            
+        }
+        
+    }
+    
+    
+    
     @objc func sendData(_sender: AnyObject?){
         
-        let humidityString = humidityInput.text != "" ? humidityInput.text : "25"
+       /* let humidityString = humidityInput.text != "" ? humidityInput.text : "25"
         
         let temperatureString = temperatureInput.text != "" ? temperatureInput.text : "75"
         
@@ -111,7 +149,7 @@ class MainScreenVM: ObservableObject {
             }
         }
 
-        task.resume()
+        task.resume()*/
         
     }
     
