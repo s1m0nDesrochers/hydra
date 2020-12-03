@@ -33,11 +33,8 @@ import SwiftUI
                             Text("Configuration").foregroundColor(Color.white).font(.custom("AppleSDGothicNeo-Light" ,size:36))
                             Spacer()
                             Button(action:{self.showSelf = false}){
-                                Image(systemName: "gear").resizable().frame(width: 30, height: 30).foregroundColor(.white).font(Font.system(.largeTitle).bold()).padding(.leading, 40)
-                                    
+                                Image(systemName: "return").resizable().frame(width: 30, height: 30).foregroundColor(.white).font(Font.system(.largeTitle).bold()).padding(.leading, 40)
                             }
-                            
-                            
                         }.frame(minWidth:0, maxWidth: .infinity, minHeight: 90, alignment: .center).padding(20).background(LinearGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.5773694601403662, saturation: 0.9232538981610035, brightness: 0.7144907756024097, opacity: 0.8427025208990259), location: 0.0), Gradient.Stop(color: Color(hue: 0.3590735469955996, saturation: 0.7599689070000707, brightness: 0.7218876574412887, opacity: 0.8408396157873683), location: 1.0)]), startPoint: UnitPoint.leading, endPoint: UnitPoint.trailing))
                         
                         Text("Calvette 1").font(.custom("AppleSDGothicNeo-Light" ,size:30))
