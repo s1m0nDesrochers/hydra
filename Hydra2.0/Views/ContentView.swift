@@ -48,39 +48,37 @@ struct ContentView: View {
                             
                             HStack{
                                 VStack(alignment: .leading) {
-                                    Text("Température").font(.custom("AppleSDGothicNeo-Light", size: 12))
-                                    Text("\(String(format:"%.1f",viewModel.ambient.temp)) °C").font(.custom("AppleSDGothicNeo-Light", size: 20))
+                                    Text("Température").font(.custom("AppleSDGothicNeo-Light", size: 12)).foregroundColor(Color.white)
+                                    Text("\(String(format:"%.1f",viewModel.ambient.temp)) °C").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
                                 }
                                 Spacer()
                                 VStack(alignment: .trailing) {
-                                    Text("Humidité").font(.custom("AppleSDGothicNeo-Light", size: 12))
-                                    Text("\(String(format:"%.1f",viewModel.ambient.humidity))%").font(.custom("AppleSDGothicNeo-Light", size: 20))
+                                    Text("Humidité").font(.custom("AppleSDGothicNeo-Light", size: 12)).foregroundColor(Color.white)
+                                    Text("\(String(format:"%.1f",viewModel.ambient.humidity))%").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
                                 }
-                            }.frame(width:UIScreen.main.bounds.width - 40).padding(10).background(Color.gray).cornerRadius(5)
+                            }.frame(width:UIScreen.main.bounds.width - 40).padding(10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 0.365004206278238, brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.06717392335455102, brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0)]), center: UnitPoint.center, startRadius: 152.77913411458331, endRadius: 413.0167643229167)).cornerRadius(10)
                             
                             VStack(alignment:.leading) {
                                 Text("Calvettes").font(.custom("AppleSDGothicNeo-Light" ,size:30)).foregroundColor(Color.white)
                             }.padding(.top, 10)
-                            
                             HStack(){
                                 VStack(spacing:10){
-                                    Text("4 plantes").font(.custom("AppleSDGothicNeo-Light", size: 20))
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.temperature1)) °C").font(.custom("AppleSDGothicNeo-Light", size: 20))
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.humidity1))%").font(.custom("AppleSDGothicNeo-Light", size: 20))
-                                }.frame(width: 100,height:120,  alignment:.center).background(Color.gray).cornerRadius(5)
+                                    Text("4 plantes").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
+                                    Text("\(String(format:"%.1f",viewModel.calvettes.temperature1)) °C").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
+                                    Text("\(String(format:"%.1f",viewModel.calvettes.humidity1))%").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
+                                }.frame(width: 100,height:120,  alignment:.center).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 0.365004206278238, brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.06717392335455102, brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0)]), center: UnitPoint.center, startRadius: 152.77913411458331, endRadius: 413.0167643229167)).cornerRadius(10)
                                 Spacer()
                                 VStack(spacing:10){
-                                    Text("2 plantes").font(.custom("AppleSDGothicNeo-Light", size: 20))
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.temperature1)) °C").font(.custom("AppleSDGothicNeo-Light", size: 20))
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.humidity2))%").font(.custom("AppleSDGothicNeo-Light", size: 20))
-                                }.frame(width: 100,height:120, alignment:.center).background(Color.gray).cornerRadius(5)
+                                    Text("2 plantes").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
+                                    Text("\(String(format:"%.1f",viewModel.calvettes.temperature1)) °C").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
+                                    Text("\(String(format:"%.1f",viewModel.calvettes.humidity2))%").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
+                                }.frame(width: 100,height:120, alignment:.center).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 0.365004206278238, brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.06717392335455102, brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0)]), center: UnitPoint.center, startRadius: 152.77913411458331, endRadius: 413.0167643229167)).cornerRadius(10)
                                 Spacer()
                                 VStack(spacing:10){
-                                    Text("3 plantes").font(.custom("AppleSDGothicNeo-Light", size: 20))
-                                    Text("\(String(format:"%.1f", viewModel.calvettes.temperature3)) °C").font(.custom("AppleSDGothicNeo-Light", size: 20))
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.humidity3))%").font(.custom("AppleSDGothicNeo-Light", size: 20))
-                                }.frame(width: 100,height:120, alignment: .center).background(Color.gray).cornerRadius(5)
-                            
+                                    Text("3 plantes").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
+                                    Text("\(String(format:"%.1f", viewModel.calvettes.temperature3)) °C").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
+                                    Text("\(String(format:"%.1f",viewModel.calvettes.humidity3))%").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
+                                }.frame(width: 100,height:120, alignment: .center).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 0.365004206278238, brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.06717392335455102, brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0)]), center: UnitPoint.center, startRadius: 152.77913411458331, endRadius: 413.0167643229167)).cornerRadius(10)
                             }
                             
                             VStack(alignment:.leading) {
@@ -95,21 +93,21 @@ struct ContentView: View {
                             }.padding(.top, 10)
                             HStack() {
                                 VStack(alignment: .leading) {
-                                    Text("PH").font(.custom("AppleSDGothicNeo-Light", size: 12))
-                                    Text("Ph: \(String(format:"%.1f",viewModel.waterTank.ph))").font(.custom("AppleSDGothicNeo-Light", size: 20))
+                                    Text("PH").font(.custom("AppleSDGothicNeo-Light", size: 12)).foregroundColor(Color.white)
+                                    Text("Ph: \(String(format:"%.1f",viewModel.waterTank.ph))").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
                                     Spacer()
-                                    Text("Flora Gro").font(.custom("AppleSDGothicNeo-Light", size: 12))
-                                    Text("12 ml/l").font(.custom("AppleSDGothicNeo-Light", size: 20))
+                                    Text("Flora Gro").font(.custom("AppleSDGothicNeo-Light", size: 12)).foregroundColor(Color.white)
+                                    Text("12 ml/l").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
                                 }
                                 Spacer()
                                 VStack(alignment: .trailing) {
-                                    Text("Flora Bloom").font(.custom("AppleSDGothicNeo-Light", size: 12))
-                                    Text("20 ml/l").font(.custom("AppleSDGothicNeo-Light", size: 20))
+                                    Text("Flora Bloom").font(.custom("AppleSDGothicNeo-Light", size: 12)).foregroundColor(Color.white)
+                                    Text("20 ml/l").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
                                     Spacer()
-                                    Text("Flora Micro").font(.custom("AppleSDGothicNeo-Light", size: 12))
-                                    Text("5 ml/l").font(.custom("AppleSDGothicNeo-Light", size: 20))
+                                    Text("Flora Micro").font(.custom("AppleSDGothicNeo-Light", size: 12)).foregroundColor(Color.white)
+                                    Text("5 ml/l").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
                                 }
-                            }.frame(width:UIScreen.main.bounds.width - 40).padding(10).background(Color.gray).cornerRadius(5)
+                            }.frame(width:UIScreen.main.bounds.width - 40).padding(10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 0.365004206278238, brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.06717392335455102, brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0)]), center: UnitPoint.center, startRadius: 152.77913411458331, endRadius: 413.0167643229167)).cornerRadius(10)
                             
                         }.frame(alignment:.center).padding(15)
                     }
