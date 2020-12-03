@@ -63,17 +63,17 @@ class WaterTank: ObservableObject, Codable {
         
         if ( waterLevel1 > 500){
             
-            progress = 90.0
+            progress = 5.0
         }
         
         if ( waterLevel2 < 100){
             
-            progress = 10.0
+            progress = 15.0
         }
         
         if ( waterLevel1 < 500 && waterLevel2 > 100){
             
-            progress = 50.0
+            progress = 20.0
             
         }
     }

@@ -113,17 +113,19 @@ class MainScreenVM: ObservableObject {
     
     
     
-    func sendData(json: String){
+    func sendData(data: [Float]){
         
-        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        //let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
         
-        let url = URL(string: "http://165.227.32.127/api/threshold/")!
+        let url = URL(string: "http://165.227.32.127/api/threshold/1")!
+        
+        let parameters = data
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
 
         
-        request.httpBody = jsonData
+        request.httpBody = parameters.purcentEncoded()
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
