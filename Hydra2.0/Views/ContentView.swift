@@ -17,6 +17,8 @@ struct ContentView: View {
     
     @EnvironmentObject var viewModel: MainScreenVM
     
+    @State private var showInput = false
+    
     var body: some View {
         
         NavigationView{
@@ -28,7 +30,7 @@ struct ContentView: View {
                         Image("hydraLogo").resizable().frame(width: 50, height: 50)
                     Text("Hydra").foregroundColor(Color.white).font(.custom("AppleSDGothicNeo-Light" ,size:36))
                     Spacer()
-                    NavigationLink(destination: InputView()){
+                    NavigationLink(destination: InputView(showSelf:$showInput),isActive: $showInput){
                         Image(systemName: "gear").resizable().frame(width: 30, height: 30).foregroundColor(.white).font(Font.system(.largeTitle).bold()).padding(.leading, 40)
                             
                     }
@@ -117,7 +119,7 @@ struct ContentView: View {
         }.navigationBarTitle("").navigationBarHidden(true)
     }
     
-}
+    }
     
 }
 
