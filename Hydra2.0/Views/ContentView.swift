@@ -21,7 +21,7 @@ struct ContentView: View {
         
         NavigationView{
         
-        ScrollView{
+            ScrollView{
             
             VStack{
                 HStack{
@@ -33,7 +33,7 @@ struct ContentView: View {
                             
                     }
                     
-            }.frame(minWidth:0, maxWidth: .infinity, minHeight: 70, alignment: .center).padding(10).background(LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .leading, endPoint: .trailing))
+                }.frame(minWidth:0, maxWidth: .infinity, minHeight: 70, alignment: .center).padding(10).background(LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .leading, endPoint: .trailing))
                 
                 VStack(alignment:.leading , spacing:15 ){
                     
@@ -85,7 +85,7 @@ struct ContentView: View {
                 }.frame(alignment:.center).padding(10)
             }.frame(minWidth:0,maxWidth: .infinity ,minHeight:UIScreen.main.bounds.height, maxHeight: .infinity, alignment: .topLeading).background(LinearGradient(gradient:Gradient(colors: [.white, .blue, .white]), startPoint: .topLeading, endPoint: .bottomTrailing))
             
-        }
+            }.navigationBarTitle("").navigationBarHidden(true)
         
         }
         
