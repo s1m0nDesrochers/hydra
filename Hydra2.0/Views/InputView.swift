@@ -65,7 +65,7 @@ import SwiftUI
                             }
                         }.padding(15)
                         
-                    }
+                    }.onAppear(perform:{setCurrentTresholds()})
                 }.navigationBarTitle("").navigationBarHidden(true).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.5773694601403662, saturation: 0.9232538981610035, brightness: 0.7144907756024097, opacity: 0.8427025208990259), location: 0.0), Gradient.Stop(color: Color(hue: 0.3590735469955996, saturation: 0.7599689070000707, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.topLeading, startRadius: 0.0, endRadius: 174.96719360351562))
                 
             
@@ -82,15 +82,39 @@ import SwiftUI
             humidityLT1 = viewModel.calvettes.humidityLowerTreshold1.description
             
             humidityUT1 = viewModel.calvettes.humidityUpperTreshold1.description
+            
+            humidityLT2 = viewModel.calvettes.humidityLowerTreshold2.description
+            
+            humidityUT2 = viewModel.calvettes.humidityUpperTreshold2.description
+            
+            humidityLT3 = viewModel.calvettes.humidityLowerTreshold3.description
+            
+            humidityUT3 = viewModel.calvettes.humidityUpperTreshold3.description
+            
+            phTreshold = viewModel.waterTank.phTreshold.description
         }
         
         func createSendParameters(){
             
-            var parameters: [Float] = []
             
-            parameters.append(Float(humidityLT1)!)
+            var parameters: [String: Any] = [
+                
+                "humidityLowerTreshold1" : Float(humidityLT1)!,
+                
+                "humidityUpperTreshold1": Float(humidityUT1)!,
+                
+                "humidityLowerTreshold2": Float(humidityLT2)!,
+                
+                "humidityUpperTreshold2": Float(humidityUT2)!,
+                
+                "humidityLowerTreshold3": Float(humidityLT3)!,
+                
+                "humidityUpperTreshold3": Float(humidityUT3)!,
+                
+                "phTreshold": Float(phTreshold)!
+                
             
-            parameters.append(Float(humidityUT1)!)
+            ]
             
             viewModel.sendData(data: parameters)
             
