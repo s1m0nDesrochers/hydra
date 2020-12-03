@@ -73,13 +73,13 @@ import SwiftUI
                                 VStack(alignment: .leading){
                                     Text("Humidité minimum").foregroundColor(Color.white).font(.custom("AppleSDGothicNeo-Light", size: 20)).bold()
                                     HStack{
-                                        TextField("LT1", text:$humidityLT1).padding(.all, 10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 1.0, brightness: 0.09040067282067725, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.030484302934393828, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.center, startRadius: 0.0, endRadius: 297.56368001302087)).cornerRadius(5).foregroundColor(Color.white)
+                                        TextField("LT1", text:$humidityLT2).padding(.all, 10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 1.0, brightness: 0.09040067282067725, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.030484302934393828, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.center, startRadius: 0.0, endRadius: 297.56368001302087)).cornerRadius(5).foregroundColor(Color.white)
                                     }
                                 }.padding(.all, 15)
                                 VStack(alignment: .leading){
                                     Text("Humidité maximum").foregroundColor(Color.white).font(.custom("AppleSDGothicNeo-Light", size: 20)).bold()
                                     HStack{
-                                        TextField("Humidité maximum calvette 2", text:$humidityUT1).padding(.all, 10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 1.0, brightness: 0.09040067282067725, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.030484302934393828, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.center, startRadius: 0.0, endRadius: 297.56368001302087)).cornerRadius(5).foregroundColor(Color.white)
+                                        TextField("Humidité maximum calvette 2", text:$humidityUT2).padding(.all, 10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 1.0, brightness: 0.09040067282067725, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.030484302934393828, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.center, startRadius: 0.0, endRadius: 297.56368001302087)).cornerRadius(5).foregroundColor(Color.white)
                                     }
                                 }.padding(.all, 15)
                             }.background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 0.365004206278238, brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.06717392335455102, brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0)]), center: UnitPoint.center, startRadius: 152.77913411458331, endRadius: 413.0167643229167)).cornerRadius(10)
@@ -96,13 +96,13 @@ import SwiftUI
                                 VStack(alignment: .leading){
                                     Text("Humidité minimum").foregroundColor(Color.white).font(.custom("AppleSDGothicNeo-Light", size: 20)).bold()
                                     HStack{
-                                        TextField("LT1", text:$humidityLT1).padding(.all, 10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 1.0, brightness: 0.09040067282067725, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.030484302934393828, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.center, startRadius: 0.0, endRadius: 297.56368001302087)).cornerRadius(5).foregroundColor(Color.white)
+                                        TextField("LT1", text:$humidityLT3).padding(.all, 10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 1.0, brightness: 0.09040067282067725, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.030484302934393828, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.center, startRadius: 0.0, endRadius: 297.56368001302087)).cornerRadius(5).foregroundColor(Color.white)
                                     }
                                 }.padding(.all, 15)
                                 VStack(alignment: .leading){
                                     Text("Humidité maximum").foregroundColor(Color.white).font(.custom("AppleSDGothicNeo-Light", size: 20)).bold()
                                     HStack{
-                                        TextField("Humidité maximum calvette 2", text:$humidityUT1).padding(.all, 10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 1.0, brightness: 0.09040067282067725, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.030484302934393828, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.center, startRadius: 0.0, endRadius: 297.56368001302087)).cornerRadius(5).foregroundColor(Color.white)
+                                        TextField("Humidité maximum calvette 2", text:$humidityUT3).padding(.all, 10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 1.0, brightness: 0.09040067282067725, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.030484302934393828, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.center, startRadius: 0.0, endRadius: 297.56368001302087)).cornerRadius(5).foregroundColor(Color.white)
                                     }
                                 }.padding(.all, 15)
                             }.background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 0.365004206278238, brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.06717392335455102, brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0)]), center: UnitPoint.center, startRadius: 152.77913411458331, endRadius: 413.0167643229167)).cornerRadius(10)
@@ -121,13 +121,6 @@ import SwiftUI
                         
                     }.onAppear(perform:{setCurrentTresholds()})
                 }.navigationBarTitle("").navigationBarHidden(true).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.5773694601403662, saturation: 0.9232538981610035, brightness: 0.7144907756024097, opacity: 0.8427025208990259), location: 0.0), Gradient.Stop(color: Color(hue: 0.3590735469955996, saturation: 0.7599689070000707, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.topLeading, startRadius: 0.0, endRadius: 174.96719360351562))
-                
-            
-            
-            
-            
-            
-            
             
         }
         
