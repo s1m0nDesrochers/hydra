@@ -125,7 +125,7 @@ class MainScreenVM: ObservableObject {
         request.httpMethod = "POST"
 
         
-        request.httpBody = parameters.purcentEncoded()
+        //request.httpBody = parameters.purcentEncoded()
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
