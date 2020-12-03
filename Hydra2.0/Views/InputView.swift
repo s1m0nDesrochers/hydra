@@ -110,6 +110,22 @@ import SwiftUI
                         
                         
                         
+                        VStack(alignment: .leading) {
+                            VStack(alignment:.leading) {
+                                Text("Réservoire").font(.custom("AppleSDGothicNeo-Light" ,size:30)).foregroundColor(Color.white)
+                            }.padding(.top, 5)
+                            VStack {
+                                VStack(alignment: .leading){
+                                    Text("PH").foregroundColor(Color.white).font(.custom("AppleSDGothicNeo-Light", size: 20)).bold()
+                                    HStack{
+                                        TextField("LT1", text:$phTreshold).padding(.all, 10).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 1.0, brightness: 0.09040067282067725, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.030484302934393828, brightness: 0.0, opacity: 1.0), location: 1.0)]), center: UnitPoint.center, startRadius: 0.0, endRadius: 297.56368001302087)).cornerRadius(5).foregroundColor(Color.white)
+                                    }
+                                }.padding(.all, 15)
+                            }.background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 0.365004206278238, brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.06717392335455102, brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0)]), center: UnitPoint.center, startRadius: 152.77913411458331, endRadius: 413.0167643229167)).cornerRadius(10)
+                        }.padding(.all, 15)
+                        
+                        
+                        
                         VStack(alignment: .trailing) {
                             HStack {
                                 Spacer()
