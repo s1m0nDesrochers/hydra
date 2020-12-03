@@ -22,28 +22,40 @@ import SwiftUI
         
         var body : some View{
             
-            ScrollView{
+            
+            
+            NavigationView{
                 
-                VStack(alignment:.center, spacing:15){
+                ScrollView{
                     
-                    Text("Calvette 1").font(.custom("AppleSDGothicNeo-Light" ,size:30))
-                    HStack{
-                        Text("Humidité minimum")
-                        TextField("LT1", text:$humidityLT1).frame(width: 40, height: 15, alignment: .center)
-                    }
-                    HStack{
-                        Text("Humidité maximum")
-                        TextField("Humidité maximum calvette 2", text:$humidityUT1)
-                    }
-                    Button(action:{createJson()}){
-                        Text("Envoyer")
-                    }
+                    VStack(alignment:.center, spacing:15){
+                        Text("Calvette 1").font(.custom("AppleSDGothicNeo-Light" ,size:30))
+                        HStack{
+                            Text("Humidité minimum")
+                            TextField("LT1", text:$humidityLT1).frame(width: 40, height: 15, alignment: .center)
+                        }
+                        HStack{
+                            Text("Humidité maximum")
+                            TextField("Humidité maximum calvette 2", text:$humidityUT1).frame(width: 40, height: 15, alignment: .center)
+                        }
+                        Button(action:{createJson()}){
+                            Text("Envoyer")
+                        }
+                    }.navigationBarTitle("").navigationBarHidden(true)
                 }
+                
             }
             
             
             
             
+            
+            
+        }
+        
+        func setCurrentTresholds(){
+            
+            humidityLT1 = viewModel.calvettes.humidityLowerTreshold1.description
         }
         
         func createJson(){
