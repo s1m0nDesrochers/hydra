@@ -70,7 +70,7 @@ struct ContentView: View {
                                 Spacer()
                                 VStack(spacing:10){
                                     Text("2 plantes").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.temperature1)) °C").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
+                                    Text("\(String(format:"%.1f",viewModel.calvettes.temperature2)) °C").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
                                     Text("\(String(format:"%.1f",viewModel.calvettes.humidity2))%").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(Color.white)
                                 }.frame(width: 100,height:120, alignment:.center).background(RadialGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6495239073971668, saturation: 0.365004206278238, brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0), Gradient.Stop(color: Color(hue: 0.6637860033885543, saturation: 0.06717392335455102, brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0)]), center: UnitPoint.center, startRadius: 152.77913411458331, endRadius: 413.0167643229167)).cornerRadius(10)
                                 Spacer()
