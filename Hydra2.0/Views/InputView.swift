@@ -125,7 +125,7 @@ import SwiftUI
                         VStack(alignment: .trailing) {
                             HStack {
                                 Spacer()
-                                Button(action:{createSendParameters()}){
+                                Button(action:{createSendParameters(); self.showSelf = false}){
                                     Text("Envoyer").foregroundColor(Color.white).padding(.all, 10)
                                 }.background(Color(hue: 0.5773694601403662, saturation: 0.9232538981610035, brightness: 0.7144907756024097, opacity: 0.8427025208990259)).cornerRadius(10)
                             }
