@@ -39,7 +39,7 @@ class MainScreenVM: ObservableObject {
     
     func callOpenWeatherApi(){
         
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=Saint-Ours&units=metric&appid=0423f1d8ad5cbacd8a4f2a0776e44a71")!
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=Saint-Ours,ca&units=metric&appid=0423f1d8ad5cbacd8a4f2a0776e44a71")!
 
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data else { return }
