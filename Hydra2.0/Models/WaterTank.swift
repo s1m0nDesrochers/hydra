@@ -56,26 +56,27 @@ class WaterTank: ObservableObject, Codable {
         
         phTreshold = try container.decode(Float.self, forKey: .phTreshold)
         
-        progress = 50.0
+        progress = 12.0
     }
     
     func setWaterProgress(){
         
-        if ( waterLevel1 > 500){
+        if ( waterLevel1 > 550){
+            
+            progress = 20.0
+        }
+        
+        if ( waterLevel2 < 70){
             
             progress = 5.0
         }
         
-        if ( waterLevel2 < 100){
+        if ( waterLevel1 < 550 && waterLevel2 > 70){
             
-            progress = 15.0
-        }
-        
-        if ( waterLevel1 < 500 && waterLevel2 > 100){
-            
-            progress = 20.0
+            progress = 12.0
             
         }
     }
+
 
 }
